@@ -198,11 +198,15 @@
 
 % Render a text with its symbol
 % Usage; \socialtext{<icon>}{<label>}
-\newcommand{\socialtext}[2]{\mbox{\textcolor{symbolcolor}{#1}#2\hspace{0.8em}}}
+\newcommand{\socialtext}[2]{\begin{tabular}{@{}m{2.0em}@{\hspace{-1ex}} l}
+ \textcolor{symbolcolor}{#1} & #2
+    \end{tabular}}
 
 % Render a link with its symbol
 % Usage; \sociallink{<icon>}{<label>}
-\newcommand{\sociallink}[3]{\mbox{\textcolor{symbolcolor}{#1}\link{#2}{#3}\hspace{0.8em}}}
+\newcommand{\sociallink}[3]{\begin{tabular}{@{}p{2.0em}@{\hspace{-1ex}} l}
+ \textcolor{symbolcolor}{#1} & \link{#2}{#3}
+    \end{tabular}}
 
 % Define author's name
 % Usage: \name{<firstname>}{<lastname>}
